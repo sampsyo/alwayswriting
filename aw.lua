@@ -6,7 +6,7 @@ require "lsqlite3"
 
 -- Initialize randomness, as suggested by:
 -- http://lua-users.org/wiki/MathLibraryTutorial
--- Maybe replace with lrandom if this seems to predictable.
+-- Maybe replace with lrandom if this seems too predictable.
 math.randomseed(os.time())
 math.random() ; math.random() ; math.random() ; math.random()
 
