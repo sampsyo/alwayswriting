@@ -1,7 +1,7 @@
 #!/usr/bin/env lua
--- require "wsapi.request"
--- require "wsapi.response"
--- require "wsapi.fastcgi"
+require "wsapi.request"
+require "wsapi.response"
+require "wsapi.fastcgi"
 require "lsqlite3"
 
 -- Initialize randomness, as suggested by:
@@ -40,7 +40,7 @@ local function genpage()
     return out
 end
 
-print(genpage())
+-- print(genpage())
 
 local function handler(env)
     local request = wsapi.request.new(env)
@@ -52,4 +52,4 @@ local function handler(env)
     return response:finish()
 end
 
--- wsapi.fastcgi.run(handler)
+wsapi.fastcgi.run(handler)
