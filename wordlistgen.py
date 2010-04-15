@@ -21,7 +21,7 @@ SIZE_MIN = 10
 SIZE_MAX = 50
 FILTER_REGEX = r"^[^']+$"
 SUFFICES = ('s', 'es', 'ed', 'd', 'ize', 'izes', 'ized', 'izer', 'izing',
-            'er', 'est', 'ing', 'ation', 'ization', 'ly')
+            'er', 'est', 'ing', 'ation', 'ization', 'ly', 'ally')
 SAMPLE = 5
 OUT_DB = "words.db"
 
