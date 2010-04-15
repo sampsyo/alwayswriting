@@ -60,7 +60,9 @@ def wordset(words):
         for suffix in SUFFICES:
             if word.endswith(suffix):
                 if word[:-len(suffix)] in good or \
-                   word[:-len(suffix)] + 'e' in good:
+                   word[:-len(suffix)] + 'e' in good or \
+                   word[:-len(suffix)].endswith('i') and \
+                        word[:-len(suffix)-1] +  'y' in good:
                     bad.add(word)
     return good - bad
     
